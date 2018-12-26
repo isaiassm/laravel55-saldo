@@ -121,12 +121,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'saldo',
-                    'url' => 'balance',
+                    'url' => 'admin/balance',
                     'icon' => 'credit-card-alt'
                 ],
                 [
                     'text' => 'Historico',
-                    'url' => 'historic',
+                    'url' => 'admin/historic',
                     'icon' => 'fas fa-history'
                 ],
 
