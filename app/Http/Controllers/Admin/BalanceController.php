@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 class BalanceController extends Controller
 {
     public function index(){
-        return view('admin.balance.index');
+        //dd(auth()->user());
+        //debug
+        $balance = auth()->user()->balance;
+        $amount = $balance ? $balance->amount : 0;
+
+        return view('admin.balance.index', compact('amount'));
     }
 }
