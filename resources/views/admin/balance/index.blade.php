@@ -17,7 +17,8 @@
         <a href="{{ route('balance.deposit') }}" class="btn btn-primary">Recarregar</a>  
         <a href="" class="btn btn-danger">Sacar</a>  
         </div>
-        <div class="box-header">
+        <div class="box-body">
+        @include('admin.includes.alerts')
         <div class="small-box bg-green">
             <div class="inner">
               <h3>R$ {{ number_format($amount, 2, ',','') }}</h3>

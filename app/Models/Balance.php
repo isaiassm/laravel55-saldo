@@ -30,7 +30,7 @@ class Balance extends Model
 
             return [
                 'success' => true,
-                'messagem' => 'sucesso ao recarregar'
+                'message' => 'sucesso ao recarregar'
             ];
 
         } else{
