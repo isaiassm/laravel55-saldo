@@ -2,6 +2,8 @@
 
 
 $this->group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
+    Route::get('withdraw', 'BalanceController@withdraw')->name('balance.withdraw');
+    Route::post('withdraw', 'BalanceController@withdrawStore')->name('withdraw.store');
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('balance', 'BalanceController@index')->name('admin.balance');
     Route::get('deposit', 'BalanceController@deposit')->name('balance.deposit');

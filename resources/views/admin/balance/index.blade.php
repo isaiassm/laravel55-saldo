@@ -14,8 +14,10 @@
 @section('content')
     <div class="box">
         <div class="box-header">
-        <a href="{{ route('balance.deposit') }}" class="btn btn-primary">Recarregar</a>  
-        <a href="" class="btn btn-danger">Sacar</a>  
+        <a href="{{ route('balance.deposit') }}" class="btn btn-primary">Recarregar</a> 
+    @if($amount > 0)     
+        <a href="{{ route('balance.withdraw') }}" class="btn btn-danger">Sacar</a>  
+    @endif    
         </div>
         <div class="box-body">
         @include('admin.includes.alerts')
