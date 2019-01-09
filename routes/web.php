@@ -3,6 +3,8 @@
 
 $this->group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
     Route::get('transfer', 'BalanceController@transfer')->name('balance.transfer');
+
+    Route::post('transfer', 'BalanceController@transferStore')->name('transfer.store');
     Route::post('confirm-transfer', 'BalanceController@confirmTransfer')->name('confirm.transfer');
 
     Route::get('withdraw', 'BalanceController@withdraw')->name('balance.withdraw');
