@@ -20,6 +20,7 @@
         <div class="box-body">
         @include('admin.includes.alerts')
         <p>Recebedor:<strong> {{$sender->name}} </strong></p> 
+       
 
         <form method="POST" action="{{ route('transfer.store') }}">
         {!! csrf_field() !!}
@@ -27,7 +28,7 @@
 
 
         <div class="form-group">
-        <input type="text" name="sender" placeholder="Valor:" class="form-control">
+        <input type="text" name="value" placeholder="Valor:" class="form-control">
         </div>
         <div class="form-group">
         <button type="submit" class="btn btn-info">Transferir</button>
