@@ -47,6 +47,7 @@
                 @endforelse
             </tbody>
       </table>
+        {!! $historics->links() !!}
         </div>
     </div>
 @stop
