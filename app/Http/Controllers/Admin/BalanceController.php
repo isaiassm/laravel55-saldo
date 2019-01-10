@@ -118,9 +118,16 @@ class BalanceController extends Controller
         return view('admin.balance.historics', compact('historics', 'types'));
     }
 
-    public function SearchHistoric(Request $request)
+    public function SearchHistoric(Request $request, Historic $historic)
     {
-        dd($request->all());
+       $dataForm = $request->all();
+
+      $historics = $historic->search($dataForm, $this->totalPage);
+
+      $types = $historic->type();
+
+      return view('admin.balance.historics', compact('historics', 'types'));
+
     }
 
 
