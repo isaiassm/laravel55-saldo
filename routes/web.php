@@ -21,6 +21,8 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'Admin', 'prefix' => 'adm
     
 });
 
+Route::get('meu-perfil', 'Admin\UserController@profile')->name('profile')->middleware('auth');
+
 Route::get('/','Site\SiteController@index');
 //a contra barra esta indicando aonde esta a controller
 
