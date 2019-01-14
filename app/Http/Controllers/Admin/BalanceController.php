@@ -11,7 +11,7 @@ use App\User;
 
 class BalanceController extends Controller
 {
-    private $totalPage = 5;
+    private $totalPage = 2;
 
     public function index(){
         //dd(auth()->user());
@@ -120,13 +120,13 @@ class BalanceController extends Controller
 
     public function SearchHistoric(Request $request, Historic $historic)
     {
-       $dataForm = $request->all();
+       $dataForm = $request->except(['_token']);
 
       $historics = $historic->search($dataForm, $this->totalPage);
 
       $types = $historic->type();
 
-      return view('admin.balance.historics', compact('historics', 'types'));
+      return view('admin.balance.historics', compact('historics', 'types', 'dataForm'));
 
     }
 
