@@ -6,7 +6,7 @@
 <h1>Meu perfil</h1> 
 
 <form action="{{ route('profile.update') }}" method="POST">
-    {{!! csrf_field() !! }}
+    {!! csrf_field() !!}
     <div class = "form-group">
         <label for="name">Nome:</label>
         <input type="text" name="name" value = "{{ auth()->user()->name }}" placeholder= "Nome" class="form-control" >
