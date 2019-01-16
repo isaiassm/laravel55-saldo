@@ -31,8 +31,12 @@
         <input type="password" name="password" placeholder= "Senha" class="form-control">
     </div>
     <div class = "form-group">
+    @if (auth()->user()->image != null)
+            <img src="{{ url('storage/users/'.auth()->user()->image) }}" alt="{{ auth()->user()->name }}" style="max-width: 50px;">
+        @endif
+        
     <label for="image">Imagem:</label>
-        <input type="file" name="file" class="form-control">
+        <input type="file" name="image" class="form-control">
     </div>
     <div class = "form-group">
     <button type="submit" class= "btn btn-info">Atualizar Perfil</button>

@@ -41,11 +41,11 @@ class UserController extends Controller
                 if (!$upload)
                     return redirect()
                                 ->back()
-                                ->with('error', 'Sucesso ao fazer upload da imagem');
+                                ->with('error', 'Falha ao fazer upload da imagem');
                                 
         
         }
-        dd($data['image']);
+        //dd($data['image']);
 
         $update = $user->update($data);
 
