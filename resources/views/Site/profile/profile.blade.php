@@ -4,17 +4,8 @@
 
 @section('content')
 <h1>Meu perfil</h1> 
- @if(session('success'))
-        <div class= "alert alert-success">
-        {{session('success')}}
-        </div>
- @endif
- @if(session('error'))
-        <div class= "alert alert-danger">
-        {{session('error')}}
-        </div>
- @endif
 
+@include('admin.includes.alerts')
 
 <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
     {!! csrf_field() !!}
@@ -34,7 +25,7 @@
     @if (auth()->user()->image != null)
             <img src="{{ url('storage/users/'.auth()->user()->image) }}" alt="{{ auth()->user()->name }}" style="max-width: 50px;">
         @endif
-        
+
     <label for="image">Imagem:</label>
         <input type="file" name="image" class="form-control">
     </div>
