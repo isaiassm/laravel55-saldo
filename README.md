@@ -10,9 +10,9 @@ sacar e consultar seu saldo.
 
 ## Passos iniciais:
 Caso queira contribuir para este projeto deverá seguir alguns passos.
-1º Clonar o projeto.
-2º Rode as migrations: php artisan migrate
-3º Na pasta que clonou deverá subir com o comando: php -S localhost:8080 -t public
+<p> 1º Clonar o projeto.
+<p> 2º Rode as migrations: php artisan migrate
+<p> 3º Na pasta que clonou deverá subir com o comando: php -S localhost:8080 -t public
 
 ## XAMMP 
 Neste Projeto ultilizamos o xammp como servidor local para desenvolvimento.
